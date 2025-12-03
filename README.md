@@ -43,4 +43,4 @@ Sometimes this manual process could take days.
 <img width="1366" height="751" alt="VTS-Entities" src="./images/VTS-ERD.png" />
 
 # Data Model
-! [Diagram](images/VTS-Data-Model.png)
+![Diagram](images/VTS-Data-Model.png)
