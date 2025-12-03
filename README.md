@@ -1,16 +1,25 @@
-# the vision
-1- empower every employee with the tools and responsibility to independently manage their time-off — including vacation, sick leave, and personal days — without needing detailed knowledge of company or local leave policies.
-2- streamline the functions of the human resources (HR) department, to minimize noncore, business-related activities of management
-3- improve the internal business processes of this organization, at least with respect to the time it takes to manage vacation time requests.
+# Vacation Tracking System
 
-# non-funtional requierment
+## the vision
+Replacing manual process of vacation requests by an automated rules-based validation system, for achieving the following goals:
+1. Enabling employees to manage thier vacation requests using easy-use system.
+2. Saving time and money mostly in HR department.
+3. Speed up the process by minimize manual approval of immdediate manager to at most one (if needed).
+
+## Domain (Problem defined)
+In the past, all vacation time had to be approved by an immediate manager and then checked by a clerk in the HR department before it was authorized.
+Sometimes this manual process could take days. 
+
+
+## non-funtional requierment
 - easy to use
-- run in any HTML 3.2 capable browser
-- implement single-sign-on
+- uses the portal’s single-sign-on mechanisms for all authentication.
+- Uses existing hardware and middleware.
+- Implemented as an extension to the existing intranet portal system.
 
-# Functional Requirements
+## Functional Requirements
 - Implements a flexible rules-based system for validating and verifying leave time requests
-- Enables manager approval
+- Enables manager approval (if needed).
 - Provides access to requests for the previous calendar year, and allows requests to be made up to a year and a half in the future
 - Uses e-mail notification to request manager approval and notify employees of request status changes
 - Keeps activity logs for all transactions
@@ -18,16 +27,20 @@
 - Allows managers to directly award personal leave time (with system-set limits)
 - Provides a Web service interface for other internal systems to query any given employee’s vacation request summary
 
+## Constraints 
+- Uses existing hardware and middleware may evoke unexpected problems related to legacy technology or servers, leading to difficulty in integration.
 
-# Constraints 
-- we should deliver the system as a web app
-- implemented as an extension to the existing intranet portal system, and uses the portal’s single-sign-on mechanisms for all authentication
-- Uses existing hardware and middleware
-- never open a transaction in one page and close it in another
-- Interfaces with the HR department legacy systems to retrieve required employee information and changes
-- use Central Authenticatoin Service to identify and authenticate end users.
+## Assumptions
+- The rules and employees data are avaliabe and well-documented
 
+## Actors and thier activites
+1. Employee: is the main user of the system. He uses the system to manage his/her vacation time.
+2. Manager: approves employee's request or rejects. Award time to subordinates.
+3. HR ClerK: views employees time, entering or updating employee vacation data in the system. override leave records, manage locations
+4. System Admin: back up system logs.
 
+# ERD Model
+<img width="1366" height="751" alt="VTS-Entities" src="./images/VTS-ERD.png" />
 
-# Assumptions
-
+# Data Model
+! [Diagram](images/VTS-Data-Model.png)
